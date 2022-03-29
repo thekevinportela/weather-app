@@ -145,7 +145,7 @@ const HomeScreen = () => {
                   {loading ? (
                     <ActivityIndicator />
                   ) : (
-                    `${Math.round(weather.main.temp_max)}°/${Math.round(
+                    `${Math.round(weather.main.temp_max)}°/ ${Math.round(
                       weather.main.temp_min
                     )}°`
                   )}
