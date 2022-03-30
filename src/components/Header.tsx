@@ -7,7 +7,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Header = ({ city }) => {
+const Header = ({ city, onSearchPress }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
@@ -22,7 +22,7 @@ const Header = ({ city }) => {
         />
         <Text style={{ fontSize: 24, color: 'white' }}>{city}</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onSearchPress}>
         <Ionicons name='search-outline' size={30} color='white' />
       </TouchableOpacity>
     </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingTop: 20,
+    paddingTop: 45,
     paddingHorizontal: 10,
   },
 });
