@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { WEATHER_API_KEY } from './constants';
+import axios from "axios";
+import { WEATHER_API_KEY } from "./constants";
 
 const getWeather = (city: string, state: string) => {
   return axios.get(
@@ -13,7 +13,7 @@ const getHourlyForecast = (lat, lon) => {
   );
 };
 const get3HourlyForecast = (lat, lon) => {
-  console.log('lat', lat, lon);
+  console.log("lat", lat, lon);
   return axios.get(
     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`
   );
